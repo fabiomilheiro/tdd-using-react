@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store locator renders 1`] = `
+<div
+  className="store-locator"
+>
+  <header>
+    <img
+      alt=""
+      src="/images/logo.png"
+    />
+  </header>
+  <button
+    id="x"
+    value="x"
+  >
+    x
+  </button>
+  <button
+    id="y"
+    value="y"
+  >
+    y
+  </button>
+  <button
+    id="w"
+    value="w"
+  >
+    w
+  </button>
+  <div
+    className="map"
+  >
+    <img
+      alt=""
+      src="/images/None.png"
+    />
+  </div>
+</div>
+`;

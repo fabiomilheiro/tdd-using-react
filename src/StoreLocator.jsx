@@ -29,7 +29,7 @@ class StoreLocator extends Component {
             key={id}
             id={l.location}
             text={l.location}
-            onClick={this.chooseMap}
+            onClick={this.cihooseMap}
           />
         ))}
         <Map location={this.state.selectedLocation} />

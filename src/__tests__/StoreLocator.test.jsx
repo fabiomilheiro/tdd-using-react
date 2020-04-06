@@ -6,6 +6,7 @@ import Header from "./../components/Header";
 import Button from "./../components/Button";
 import Map from "./../components/Map";
 import Axios from "axios";
+import renderer from "react-test-renderer";
 
 const locationsResponse = {
   data: [
@@ -52,6 +53,11 @@ describe("Store locator", () => {
     });
   });
   test("renders shallow without crashing", () => {});
+
+  test("renders", () => {
+    const tree = renderer.create(<StoreLocator />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 
   test("Renders header", () => {
     const headers = storeLocator.find(Header);
