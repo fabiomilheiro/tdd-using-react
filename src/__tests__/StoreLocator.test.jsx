@@ -35,6 +35,22 @@ describe("Store locator", () => {
     await storeLocator.instance().componentDidMount();
   });
 
+  test("contains initialized state", () => {
+    expect(storeLocator.state()).toEqual({
+      locations: [
+        {
+          location: "Test Portland",
+        },
+        {
+          location: "Test Astoria",
+        },
+        {
+          location: "",
+        },
+      ],
+      selectedLocation: "",
+    });
+  });
   test("renders shallow without crashing", () => {});
 
   test("Renders header", () => {
