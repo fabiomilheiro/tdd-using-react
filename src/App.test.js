@@ -1,9 +1,18 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "./App";
+import { shallow } from "enzyme";
+import StoreLocator from "./StoreLocator";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App", () => {
+  let app;
+
+  beforeEach(() => {
+    app = shallow(<App />);
+  });
+
+  test("Renders store locator", () => {
+    const storeLocators = app.find(StoreLocator);
+    expect(storeLocators.length).toBe(1);
+  });
 });
