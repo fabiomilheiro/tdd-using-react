@@ -52,9 +52,8 @@ describe("Store locator", () => {
       selectedLocation: "",
     });
   });
-  test("renders shallow without crashing", () => {});
 
-  test("renders", () => {
+  test("Renders snapshot", () => {
     const tree = renderer.create(<StoreLocator />).toJSON();
     expect(tree).toMatchSnapshot();
   });

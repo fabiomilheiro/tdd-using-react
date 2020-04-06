@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Store locator renders 1`] = `
+exports[`Store locator Renders snapshot 1`] = `
 <div
   className="store-locator"
 >
